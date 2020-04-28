@@ -9,10 +9,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install Dependences
-      run: |
-        pod repo update
-        pod install
-      shell: bash
     - name: Run tests
       run: xcodebuild build -destination 'name=iPhone 11' -scheme 'MyColor' -workspace 'MyColor.xcworkspace'
